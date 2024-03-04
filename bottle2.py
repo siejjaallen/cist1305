@@ -6,7 +6,7 @@
 def main():
     endProgram = 'no'
     while endProgram == 'no':
-        totalBottles = getBottles()
+        totalBottles = getBottles ()
         totalPayout = calcPayout(totalBottles)
         printInfo(totalBottles, totalPayout)
         endProgram= input('Do you want to end the program? (Enter yes or no): ')
@@ -18,8 +18,8 @@ def getBottles():
     counter = 1
 
     while counter <=7:
-        todayBottles = input('Enter number of bottles for today:')
-        totalBottles=totalBottles+todayBottles
+        todayBottles = int(input('Enter number of bottles for today:'))
+        totalBottles = totalBottles + todayBottles
         counter = counter + 1
     return totalBottles
     
@@ -31,8 +31,8 @@ def calcPayout (totalBottles):
 
 #this function will display the information
 def printInfo(totalBottles, totalPayout):
-    print ('The total number of bottles collected is'), totalBottles
-    print ('The total paid out is $'), totalPayout
- 
+    print ('The total number of bottles collected is', totalBottles)
+    print ('The total paid out is $', totalPayout)
+
  #calling main
-main()
+main ()
